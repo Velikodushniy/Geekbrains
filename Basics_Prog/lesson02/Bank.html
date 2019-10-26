@@ -1,0 +1,12 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+var deposit = +prompt("Введите сумму вклада");
+var rate = +prompt("Введите процентную ставку");
+var maxYear = +prompt("Введите срок вклада");
+
+// Создаём счётчик. Считаем процент и увеличиваем депозит на процент.
+for (var i = 1; i <= maxYear; i++) {
+		deposit = deposit+(deposit/100*rate);
+	alert ("Процент через " + i +" год(а) составит " + deposit.toFixed(2) + " руб.");
+	}
+</script>
