@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+
+		function compare(quest1, answer){
+			for (var i = 0; i < answer.length; i++){
+			if (quest1 == answer[i]){
+				alert("Правильно");
+				sum = sum + 1;
+				break;
+			} 
+		}
+		if (quest1 != answer[i]){
+			alert("Не верно");
+			}
+		}
+
+		var sum = 0;
+
+		var quest1 = prompt("Идет то в гору, то с горы, но остается на месте. Что это?").toLowerCase();
+		var answer = ["дорога","тропа"]
+		compare(quest1, answer);
+
+		var quest1 = prompt("Оно в комнате, а комната в нем. Что это?").toLowerCase();
+		var answer = ["зеркало", "зеркальце"]
+		compare(quest1, answer);
+
+
+		var quest1 = prompt("В каком слове 5 'е' и никаких других гласных?").toLowerCase();
+		var answer = ["переселенец","длинношеее"]
+		compare(quest1, answer);
+
+		alert("Правильных ответов = " + sum);
+
+
+		
+		
+		
+
+</script>

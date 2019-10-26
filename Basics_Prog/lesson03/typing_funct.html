@@ -1,0 +1,75 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+		
+	function generateText(letters, length) {
+		
+		var text = ""; 
+		for (var i = 0; i < length; i++) {
+			 var n = getRandomNamber(letters.length - 1);
+	 		 text = text + letters[n]; 
+	    }
+	 	return text; 
+	}
+
+	function getRandomNamber(max){
+		return Math.round(Math.random() * max);
+	}
+
+	function compare(){
+		if(userText == text){
+			alert("Всё верно");
+			//break; выносим прерывание из функции
+		} else {
+			alert("Вы ошиблись. Попробуйте ещё раз");
+		}
+	}
+
+	alert("Вас приветствует программа по обучению слепой печати");
+	
+	while (true) {
+		alert("1. Положите 4 пальца левой руки - мезинец, безымянный, средний и указательный - на клавиши ф, ы, в, а.\nЗапомните, что буква А находится под вашим указательным пальцем, а Ф - под мизинцем. \nТеперь не спеша набирайте текст. \nПостарайтесь не смотреть на клавиатуру. ");
+
+		var text = generateText(["ф","а"], 10);
+		var userText = prompt(text);
+		
+		compare();
+		break;
+	}
+	while (true) {
+		alert("2. Поставьте мизинец левой руки на букву Ф, безымянный палец — на Ы, средний — на В, указательный — на А.\nМизинец правой руки на букву Ж, безымянный палец — на Д, средний — на Л, указательный — на О.\nЗапомните расположение пальцев. Повторяйте за мной");
+
+		var text = generateText(["ы","в"], 10);
+		var userText = prompt(text);
+
+		compare();
+		break;
+	}
+	while (true) {
+		alert("3. Поставьте мизинец левой руки на букву Ф, безымянный палец — на Ы, средний — на В, указательный — на А.\nМизинец правой руки на букву Ж, безымянный палец — на Д, средний — на Л, указательный — на О.\nЗапомните расположение пальцев");
+
+		var text = generateText(["о","ж"], 10);
+		var userText = prompt(text);
+
+		compare();
+		break;
+	}
+	while (true) {
+		alert("4. Поставьте мизинец левой руки на букву Ф, безымянный палец — на Ы, средний — на В, указательный — на А.\nМизинец правой руки на букву Ж, безымянный палец — на Д, средний -— на Л, указательный — на О.\nЗапомните расположение пальцев");
+
+		var text = generateText(["л","д"], 10);
+		var userText = prompt(text);
+
+		compare();
+		break;
+	}
+	while (true) {
+		alert("5. Поставь пальцы левой руки на Ф Ы В А.\nА пальцы правой руки поставь на О Л Д Ж. \nЗапомните расположение пальцев и Поеееехали!!!");
+
+		var text = generateText(["ф","ы","в","а","о","л","д","ж"], 20);
+		var userText = prompt(text);
+
+		compare();
+		break;
+	}
+	alert("Да ты просто пианист :)");
+</script>
