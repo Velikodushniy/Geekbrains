@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Личный сайт студента GeekBrains</title>
+	<link rel="stylesheet" href="style.css"> 
+	<script type="text/javascript">
+		
+		function readInt(){
+			var number = document.getElementById("userAnswer3").value;
+			return parseInt(number);
+			// return +document.getElementById("userAnswer").value;
+		}
+
+		function write(text){
+			document.getElementById("info3").innerHTML = text;
+		}
+
+
+		function generate() {
+		    var num = readInt();
+		        arr = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+		        pass = "";
+		    for (var i = 0, n = arr.length; i < num; ++i) {
+		        pass += arr.charAt(Math.floor(Math.random() * n));
+		    }
+		    write("Ваш пароль: " + pass);
+		    //return pass;
+		}
+
+		function handleChange(input) {
+		    if (input.value < 0) input.value = 0;
+		    if (input.value > 20) input.value = 20;
+		  }
+
+
+	</script>
+</head>
+<body>
+
+<div class="content">
+<!-- <?php
+	include "menu.php";
+?> -->
+<div class="header">
+		<a href="index.html">Главная</a>
+		<a href="puzzle.html">Загадки</a>
+		<a href="guess.html">Угадайка</a>
+		<a href="guess2.html">Угадайка мультиплеер</a>
+		<a href="generate.html">Генератор паролей</a>
+	</div>
+
+<div class="contentWrap">
+    <div class="content">
+        <div class="center">
+
+			<h1>Генератор паролей</h1>
+
+			<div class="box">
+
+				<p id="info3">Введи целое число от 1 до 20</p>
+				<form action="handler.php">
+				<input type="text" onchange='handleChange(this);' id="userAnswer3">
+				</form>
+				<br>
+				<a href="#" onClick="generate();" id="button">Генерировать</a>
+			</div>
+
+        </div>
+    </div>
+</div>
+
+	
+
+</div>
+<div class="footer">
+	Copyright &copy; Vasily Pupkin
+<div>
+
+
+</body>
+</html>
